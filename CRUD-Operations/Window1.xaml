@@ -1,0 +1,41 @@
+﻿<Window x:Class="CRUD_Operations.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="375" Width="668" >
+    <Grid Width="628">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*" />
+            <RowDefinition Height="288*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="226*" />
+            <ColumnDefinition Width="183*" />
+            <ColumnDefinition Width="209*" />
+        </Grid.ColumnDefinitions>
+        <Button HorizontalAlignment="Left" Margin="14,12,0,0" Name="button1" Width="30" Content="&lt;&lt;" Click="button1_Click" Height="23.779" VerticalAlignment="Top"></Button>
+        <Button Margin="0,12,149.657,0" Name="button2" Width="30" HorizontalAlignment="Right" Click="button2_Click" Height="23.779" VerticalAlignment="Top">&lt;</Button>
+        <Button HorizontalAlignment="Right" Margin="0,12,113.657,0" Name="button3" Width="30" Click="button3_Click" Height="23.779" VerticalAlignment="Top">&gt;</Button>
+        <Button Margin="0,12,73,0" Name="button4" Click="button4_Click" HorizontalAlignment="Right" Width="31" Height="23.779" VerticalAlignment="Top">&gt;&gt;</Button>
+        <Button HorizontalAlignment="Left" Margin="0,11,0,0" Name="button5" Width="75" Grid.Column="1" Height="23.779" VerticalAlignment="Top" Click="button5_Click">Add</Button>
+        <Button Margin="91,11,30,0" Name="button6" Grid.Column="1" Height="23.779" VerticalAlignment="Top" Click="button6_Click">Delete</Button>
+        <Button Margin="172,12,0,0" Name="button7" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="65.343" Height="23.779" VerticalAlignment="Top" Click="button7_Click">Revert</Button>
+        <Button Margin="70.338,11,0,0" Name="button8" Grid.Column="2" HorizontalAlignment="Left" Width="75.044" Height="23.779" VerticalAlignment="Top" Click="button8_Click">Save</Button>
+        <StackPanel Grid.Row="1" Name="stackPanel1" Margin="0,0,6,0" Height="293.221" VerticalAlignment="Top">
+            <Label Height="28" Name="label1" Width="120" Margin="5">Employee ID</Label>
+            <Label Height="28" Name="label2" Width="120" Margin="5">Last Name</Label>
+            <Label Height="28" Name="label3" Width="120" Margin="5">First Name</Label>
+            <Label Height="28" Name="label4" Width="120" Margin="5">City</Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0,41,0,0" Name="stackPanel2" Grid.RowSpan="2" Height="296" VerticalAlignment="Top">
+            <TextBox Height="28" Name="textBox1" Width="159" Margin="5"
+                     Text="{Binding Path=EmployeeID,Mode=OneWay}" IsReadOnly="True"/>
+            <TextBox Height="28" Name="textBox2" Width="157" Margin="5"
+                     Text="{Binding Path=LastName}"/>
+            <TextBox Height="28" Name="textBox3" Width="160" Margin="5" 
+                     Text="{Binding Path=FirstName}"/>
+            <TextBox Height="28" Name="textBox4" Width="157" Margin="5" 
+                     Text="{Binding Path=City}"/>
+        </StackPanel>
+        <Image Name="image1" Stretch="Fill" Source="{Binding Path=Photo}" Grid.Column="2" Margin="9.382,5,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="136" Height="139.221" VerticalAlignment="Top" />
+    </Grid>
+</Window>

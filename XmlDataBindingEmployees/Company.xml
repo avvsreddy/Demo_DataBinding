@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Company Xmlns="">
+	<EmployeeInfo>
+		<EmpNo>101</EmpNo>
+		<EmpName>Mahesh Sabnis</EmpName>
+		<EmpImage>./Images1/Mahesh2.jpg</EmpImage>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<EmpNo>102</EmpNo>
+		<EmpName>Tejas Sabnis</EmpName>
+		<EmpImage>./Images1/Tejas6.jpg</EmpImage>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<EmpNo>103</EmpNo>
+		<EmpName>Subodh Sohoni</EmpName>
+		<EmpImage>./Images1/Subodh5.jpg</EmpImage>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<EmpNo>104</EmpNo>
+		<EmpName>Gouri Sohoni</EmpName>
+		<EmpImage>./Images1/Gouri1.jpg</EmpImage>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<EmpNo>105</EmpNo>
+		<EmpName>Ravi Tambde</EmpName>
+		<EmpImage>./Images1/Ravi4.jpg</EmpImage>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<EmpNo>106</EmpNo>
+		<EmpName>Pravin Dabade</EmpName>
+		<EmpImage>./Images1/Pravin3.jpg</EmpImage>
+	</EmployeeInfo>
+</Company>

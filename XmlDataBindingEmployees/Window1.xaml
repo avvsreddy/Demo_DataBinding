@@ -1,0 +1,40 @@
+﻿<Window x:Class="XmlDataBindingEmployees.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="XmlDataBindingEmployees" Height="600" Width="556"
+    >
+    <Window.Resources>
+        <XmlDataProvider x:Key="EmpDs" Source="Company.xml" XPath="Company/EmployeeInfo"/>
+        <DataTemplate x:Key="EmpDataTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding XPath=EmpImage}" Width="50" Height="50" Margin="10"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{Binding XPath=EmpNo}"/>
+                    <TextBlock Text="{Binding XPath=EmpName}"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid DataContext="{Binding Source={StaticResource EmpDs}}" >
+        <!--<ListBox Margin="43,16,0,39" 
+			  ItemsSource="{Binding}"
+			   ItemTemplate="{DynamicResource EmpDataTemplate}"
+			  Name="lstNames"
+			  HorizontalAlignment="Left" Width="185.958" 
+			   IsSynchronizedWithCurrentItem="True"/>
+        
+		    <Image Margin="257,37,112,137" Name="imgEmp" 
+		    Source ="{Binding XPath=EmpImage}"/>-->
+
+
+
+        <Label Height="28" HorizontalAlignment="Right" Margin="0,0,128,95" Name="label1" VerticalAlignment="Bottom" Width="120" 
+
+               Content="{Binding XPath=EmpName}"></Label>
+        <ComboBox ItemsSource="{Binding}" 
+                  ItemTemplate="{DynamicResource EmpDataTemplate}"
+            
+            x:Name="comboBox" HorizontalAlignment="Left" Margin="10,66.178,0,0" VerticalAlignment="Top" Width="206.346"/>
+    </Grid>
+</Window>

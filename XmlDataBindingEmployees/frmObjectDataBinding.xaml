@@ -1,0 +1,15 @@
+﻿<Window x:Class="XmlDataBindingEmployees.frmObjectDataBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:src="clr-namespace:XmlDataBindingEmployees" 
+    Title="XmlDataBindingEmployees" Height="152" Width="487"
+    >
+	<Window.Resources>
+		<src:Processor x:Key="P"/>
+	</Window.Resources>
+
+	<Grid>
+		<Label x:Name="MyLabel" Content="{Binding Source={StaticResource P}, Path=ProcessorTime}"/>
+
+	</Grid>
+</Window>
